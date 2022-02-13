@@ -6,5 +6,8 @@ O índice de poder de Banzhaf gera a probabilidade de cada coalizão dar o voto 
 # Pacotes utilizados
 CoopGame
 
-#Fonte dos dados
+#Fonte
+
+https://www.camara.leg.br/Internet/Deputado/bancada.asp
+https://www25.senado.leg.br/web/senadores/em-exercicio/-/e/por-partido
 
