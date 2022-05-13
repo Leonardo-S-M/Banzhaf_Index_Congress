@@ -1,8 +1,8 @@
 install.packages("CoopGame")
 library(CoopGame)
 
-### Õndices de Banzhaf para a C‚mara dos Deputados
-#Divis„o em 5 blocos polÌticos: esquerda, centro-esquerda, centro, centro direita, direita
+### √çndices de Banzhaf para a C√¢mara dos Deputados
+#Divis√£o em 5 blocos pol√≠ticos: esquerda, centro-esquerda, centro, centro direita, direita
 #Bloco Esquerda: PT/53, PSOL/9, PcdoB/8. Total: 70
 #Bloco Centro-Esquerda: PSB/30, PDT/26, PV/4, REDE/1, CIDADANIA/7. Total: 67
 #Bloco Centro: PL/43, PP/42, PSD/35, MDB/34, REPUBLICANOS/31, PTB/10, PROS/10, SOLIDARIEDADE/13. Total: 218
@@ -10,39 +10,39 @@ library(CoopGame)
 #Bloco Direita: PSL/55, NOVO/8, PSC/12, AVANTE/8, PATRIOTA/6. Total: 89
 
 #PARA LEI
-#N˙mero de votos deve ser > 257 (maioria simples)
+#N√∫mero de votos deve ser > 257 (maioria simples)
 CamaraLei<-weightedVotingGameVector(n=5, w=c(70,67,218,69,89), q=257)
 normalizedBanzhafIndex(CamaraLei)
 
 #PARA PEC
-#N˙mero de votos deve ser > 308 (mÌnimo de 3/5 dos votos)
+#N√∫mero de votos deve ser > 308 (m√≠nimo de 3/5 dos votos)
 CamaraPEC<-weightedVotingGameVector(n=5, w=c(70,67,218,69,89), q=308)
 normalizedBanzhafIndex(CamaraPEC)
 
 #PARA IMPEACHMENT
-#N˙mero de votos deve ser > 342 (mÌnimo de 2/3 dos votos)
+#N√∫mero de votos deve ser > 342 (m√≠nimo de 2/3 dos votos)
 CamaraImpeachment<-weightedVotingGameVector(n=5, w=c(70,67,218,69,89), q=342)
 normalizedBanzhafIndex(CamaraImpeachment)
 
-###Õndices de Banzhaf para o Senado
+###√çndices de Banzhaf para o Senado
 #Bloco Esquerda: PT/7, PSOL/0, PcdoB/0. Total: 7
 #Bloco Centro-Esquerda: PSB/0, PDT/3, PV/0, REDE/1, CIDADANIA/3. Total: 7
 #Bloco Centro: PL/6, PP/7, PSD/11, MDB/16, REPUBLICANOS/1, PTB/0, PROS/3, SOLIDARIEDADE/0. Total: 44
-#Bloco Centro-Direita: PSDB/6, DEM/5, PODE/9. Total: 69
+#Bloco Centro-Direita: PSDB/6, DEM/5, PODE/9. Total: 20
 #Bloco Direita: PSL/2, NOVO/0, PSC/1, AVANTE/0, PATRIOTA/0. Total: 3
 
 #PARA LEI
-#N˙mero de votos deve ser > 41 (maioria simples)
+#N√∫mero de votos deve ser > 41 (maioria simples)
 SenadoLei<-weightedVotingGameVector(n=5, w=c(7,7,44,20,3), q=41)
 normalizedBanzhafIndex(SenadoLei)
 
 #PARA PEC
-#N˙mero de votos deve ser > 49 (mÌnimo de 3/5 dos votos)
+#N√∫mero de votos deve ser > 49 (m√≠nimo de 3/5 dos votos)
 SenadoPEC<-weightedVotingGameVector(n=5, w=c(7,7,44,20,3), q=49)
 normalizedBanzhafIndex(SenadoPEC)
 
 #PARA IMPEACHMENT
-#N˙mero de votos deve ser > 54 (mÌnimo de 2/3 dos votos)
+#N√∫mero de votos deve ser > 54 (m√≠nimo de 2/3 dos votos)
 SenadoImpeachment<-weightedVotingGameVector(n=5, w=c(7,7,44,20,3), q=54)
 normalizedBanzhafIndex(SenadoImpeachment)
 
